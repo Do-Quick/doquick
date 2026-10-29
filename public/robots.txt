@@ -1,9 +1,16 @@
 User-agent: *
 Allow: /
 Allow: /ads.txt
+Allow: /tools
+Allow: /tool/
+
+User-agent: Googlebot
+Allow: /
 
 User-agent: Mediapartners-Google
 Allow: /
 
-User-agent: Googlebot
+User-agent: Bingbot
 Allow: /
+
+Sitemap: https://doquick.in/sitemap.xml
