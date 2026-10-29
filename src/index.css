@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+@layer base {
+  * {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+  
+  h1, h2, h3, .font-display {
+    font-family: 'Space Grotesk', 'Plus Jakarta Sans', sans-serif;
+  }
+
+  body {
+    background-color: #030712;
+    color: #f8fafc;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+}
+
+@keyframes aura-pulse {
+  0%, 100% {
+    transform: scale(1) translate(0px, 0px);
+    opacity: 0.45;
+  }
+  50% {
+    transform: scale(1.2) translate(15px, -15px);
+    opacity: 0.75;
+  }
+}
+
+@keyframes aura-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes float-glow {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes pop-float {
+  0% {
+    opacity: 1;
+    transform: translateY(0px) scale(0.9);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-30px) scale(1.15);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-65px) scale(1);
+  }
+}
+
+.animate-aura-pulse {
+  animation: aura-pulse 9s ease-in-out infinite;
+}
+
+.animate-aura-spin {
+  animation: aura-spin 25s linear infinite;
+}
+
+.animate-float-glow {
+  animation: float-glow 4s ease-in-out infinite;
+}
+
+.animate-pop-float {
+  animation: pop-float 0.85s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
